@@ -19,6 +19,7 @@ body {
     'nav main ads'
     'nav main featured'
     'footer footer footer';
+  grid-gap: 5px;
 }
 
 #one {
@@ -42,4 +43,18 @@ body {
 
 .box {
   border: 2px solid blue;
+}
+
+@media screen and (max-width: 600px) and (min-width: 401px) {
+  #parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'header header'
+      'nav main'
+      'ads main'
+      'featured main'
+      'footer footer';
+  }
 }
